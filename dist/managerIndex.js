@@ -73,7 +73,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 
-/******/ 			script.src = __webpack_require__.p + "" + ({"1":"mainPage"}[chunkId]||chunkId) + ".chunk.js";
+/******/ 			script.src = __webpack_require__.p + "" + ({}[chunkId]||chunkId) + ".chunk.js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
@@ -85,7 +85,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "../../";
+/******/ 	__webpack_require__.p = "../../dist/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -31341,9 +31341,9 @@
 
 	    var routes = [{
 	        path: '/',
-	        getIndexRoute: function getIndexRoute(nextState, cb) {
+	        getComponent: function getComponent(nextState, cb) {
 	            __webpack_require__.e/* nsure */(1, function (require) {
-	                cb(null, __webpack_require__(407));
+	                cb(null, __webpack_require__(407).default);
 	            });
 	        },
 

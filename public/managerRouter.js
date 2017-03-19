@@ -12,10 +12,10 @@ let routerConfig = ({history , app}) =>{
     const routes = [
         {
             path : '/',
-            getIndexRoute(nextState , cb){
+            getComponent(nextState , cb){
                 require.ensure([] , require =>{
-                    cb(null , require('./managerComponents/App'));
-                } , 'mainPage');
+                    cb(null , require('./managerComponents/App').default);
+                });
             },
             childRoutes : [
                 {

@@ -1,11 +1,15 @@
-import React , {component} from 'react'
+import React , {Component} from 'react'
+import {connect} from 'dva'
 
-class App extends component{
+class App extends Component{
     render() {
         return(
             <div>app</div>
         )
     }
 }
+let select = (state) => {
+    return{}
+}
 
-export default App;
+export default connect(select)(App);

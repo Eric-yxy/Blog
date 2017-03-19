@@ -15,6 +15,8 @@ webpackJsonp([1],{
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _dva = __webpack_require__(193);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -46,7 +48,11 @@ webpackJsonp([1],{
 	    return App;
 	}(_react.Component);
 
-	exports.default = App;
+	var select = function select(state) {
+	    return {};
+	};
+
+	exports.default = (0, _dva.connect)(select)(App);
 
 /***/ }
 
