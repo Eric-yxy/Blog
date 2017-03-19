@@ -1,0 +1,55 @@
+@import 'public_var';
+$userInfoHeight : 30px;
+
+.user-info-wrap{
+  @include contentDiv();
+}
+.user-info-inner{
+  padding : 4%;
+  width : 92%;
+}
+.user-info-header{
+  width : 100%;
+  height : $userInfoHeight;
+}
+fieldset{
+  border-width : 1px 0 0 0 ;
+  border-color : $mainBorderColor;
+  border-style : solid;
+}
+legend{
+  font-size : $contentSize;
+  margin-left : -8px;
+  padding : 0 9px;
+}
+.change-btn-wrap{
+  float : right;
+  margin-top : -17px;
+  width : 44px;
+}
+.change-btn-inner{
+  @include smallBtn(20px);
+}
+.user-info-content-wrap{
+  width : 100%;
+  margin-top : 12px;
+}
+.user-info-one-layer{
+  width : 100%;
+  height : 30px;
+  margin-top : 9px;
+}
+.user-option{
+  display : inline-block;
+  width : 55px;
+  font-size : $commentSize;
+  color :  $contentGrayColor;
+  text-align : right;
+  margin-right : 10px;
+}
+.user-info-detail{
+  @extend .user-option;
+  width : 200px;
+  color : $userInfoColor;
+  text-align : left;
+}
