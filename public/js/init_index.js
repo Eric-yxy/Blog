@@ -1,11 +1,5 @@
-//public_module['userModule'].init({
-//    targetId : 'content-right-wrap',
-//    username : 'yang' ,
-//    pwd : 1234
-//});
-
 var MainContentModel = React.createClass({
-    getInitialState : function(){
+    getInitialState : function(){ 
         return{
             isLogin : false,
             showLoginLayer : 'none',

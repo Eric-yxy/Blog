@@ -6,6 +6,9 @@ var router = express();
 router.get('/index' , function(req , res){
     res.render('index.jade');
 });
+router.get('/manager' , function(req ,res){
+    res.render('manager.jade');
+});
 router.get('/userPage' , function(req ,res){
     var isLogin = checkLogin(req , res);
     if(!isLogin){

@@ -38,6 +38,8 @@ var HeaderModel = React.createClass({
                             </li>
                         </ul>
                     </div>
+
+
                 </section>
             </header>
         )
@@ -88,3 +90,4 @@ var HeaderNavUserModel = React.createClass({
         )
     }
 })
+

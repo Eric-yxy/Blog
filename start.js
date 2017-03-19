@@ -12,11 +12,12 @@ var cookieParser = require('cookie-parser');
 var app = express();
 //set module
 app.set('views' ,path.join(__dirname , 'views'));
-app.set('views engine' , 'jade');
+app.set('view engine' , 'jade');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : false}));
 
+//app.use(express.static(path.join(__dirname , 'dist')));
 app.use(express.static(path.join(__dirname , 'public')));
 app.use(express.static(path.join(__dirname , '/')));
 //app.use(exress.static(path.join(__dirname , '')))
@@ -45,8 +46,7 @@ app.use(flash());
 
 
 routes(app);
-console.log(config.port);
-debugger;
+
 
 app.listen(config.port , function(){
     console.log(pkg.name + ' is listening on port ' + config.port);

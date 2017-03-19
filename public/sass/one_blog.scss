@@ -165,13 +165,15 @@
 }
 .arrow-icon-border{
   @include triangle($mainBorderColor);
+  position : relative;
+  top : -2px;
 
 }
 .arrow-icon{
   @include triangle($blogCommentBgColor);
   vertical-align: top;
   position : relative;
-  top: -15px;
+  top: -20px;
 }
 .comment-wrap{
   border-top : 1px solid $mainBorderColor;
