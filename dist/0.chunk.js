@@ -1,6 +1,6 @@
-webpackJsonp([1],{
+webpackJsonp([0],{
 
-/***/ 414:
+/***/ 483:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24,30 +24,30 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var UserIndex = function (_Component) {
-    _inherits(UserIndex, _Component);
+var Index = function (_Component) {
+    _inherits(Index, _Component);
 
-    function UserIndex() {
-        _classCallCheck(this, UserIndex);
+    function Index() {
+        _classCallCheck(this, Index);
 
-        return _possibleConstructorReturn(this, (UserIndex.__proto__ || Object.getPrototypeOf(UserIndex)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (Index.__proto__ || Object.getPrototypeOf(Index)).apply(this, arguments));
     }
 
-    _createClass(UserIndex, [{
+    _createClass(Index, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 'div',
                 null,
-                'user page'
+                'welcome to wei blog manager!'
             );
         }
     }]);
 
-    return UserIndex;
+    return Index;
 }(_react.Component);
 
-exports.default = UserIndex;
+exports.default = Index;
 
 /***/ })
 

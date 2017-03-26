@@ -1,0 +1,16 @@
+@import '../public.scss';
+
+.all-content-wrap{
+	margin-top : $navigationHeight;
+}
+
+.content-layerout-sider{
+	float : left;
+	width : $contentSideWidth;
+}
+
+.content-layerout-main{
+	float : left;
+	width : $contentMainWidth;
+	margin-left : 3%;
+}

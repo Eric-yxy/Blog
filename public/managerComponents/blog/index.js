@@ -6,7 +6,7 @@ import '../app.scss'
 
 const FormItem = Form.Item
 
-class UserIndex extends Component {
+class BlogIndex extends Component {
 
   constructor(props) {
     super(props)
@@ -41,7 +41,7 @@ class UserIndex extends Component {
       <div>
         <aside className='content-layerout-sider'>
           <Menu mode='inline' defaultSelectedKeys={['1']} selectedKeys={this.state.selectKey}>
-            <Menu.Item key='1'><Link to='/user/userDetail'>用户列表</Link></Menu.Item>
+            <Menu.Item key='1'><Link to='/blog/blogList'>微博搜索</Link></Menu.Item>
             
           </Menu>
 
@@ -63,5 +63,5 @@ class UserIndex extends Component {
 // }
 
 // export default connect(select)(Form.create()(Index))
-export default UserIndex;
+export default BlogIndex;
 

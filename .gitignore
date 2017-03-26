@@ -2,3 +2,4 @@
 node_modules/
 workspace.xml
 .sass-cache/
+#node_modules/*
