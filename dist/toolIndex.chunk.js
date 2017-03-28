@@ -1,4 +1,4 @@
-webpackJsonp([5],Array(372).concat([
+webpackJsonp([4],Array(372).concat([
 /* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2908,7 +2908,10 @@ module.exports = function (css) {
 /* 427 */,
 /* 428 */,
 /* 429 */,
-/* 430 */
+/* 430 */,
+/* 431 */,
+/* 432 */,
+/* 433 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2952,13 +2955,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var FormItem = _form2.default.Item;
 
-var BlogIndex = function (_Component) {
-  _inherits(BlogIndex, _Component);
+var ToolIndex = function (_Component) {
+  _inherits(ToolIndex, _Component);
 
-  function BlogIndex(props) {
-    _classCallCheck(this, BlogIndex);
+  function ToolIndex(props) {
+    _classCallCheck(this, ToolIndex);
 
-    var _this = _possibleConstructorReturn(this, (BlogIndex.__proto__ || Object.getPrototypeOf(BlogIndex)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (ToolIndex.__proto__ || Object.getPrototypeOf(ToolIndex)).call(this, props));
 
     _this.state = {
       selectKey: ['1']
@@ -2986,7 +2989,7 @@ var BlogIndex = function (_Component) {
   //   this.syncSelectKey()
   // }
 
-  _createClass(BlogIndex, [{
+  _createClass(ToolIndex, [{
     key: 'render',
     value: function render() {
       // const {getFieldDecorator} = this.props.form
@@ -3004,8 +3007,8 @@ var BlogIndex = function (_Component) {
               { key: '1' },
               _react2.default.createElement(
                 _router.Link,
-                { to: '/blog/blogList' },
-                '\u5FAE\u535A\u641C\u7D22'
+                { to: '/tool/createPush' },
+                '\u521B\u5EFA\u63A8\u9001'
               )
             )
           )
@@ -3023,7 +3026,7 @@ var BlogIndex = function (_Component) {
     }
   }]);
 
-  return BlogIndex;
+  return ToolIndex;
 }(_react.Component);
 // let select = (state) => {
 //   return {
@@ -3034,12 +3037,9 @@ var BlogIndex = function (_Component) {
 // export default connect(select)(Form.create()(Index))
 
 
-exports.default = BlogIndex;
+exports.default = ToolIndex;
 
 /***/ }),
-/* 431 */,
-/* 432 */,
-/* 433 */,
 /* 434 */,
 /* 435 */
 /***/ (function(module, exports, __webpack_require__) {

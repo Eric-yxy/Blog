@@ -30,6 +30,10 @@ class App extends Component{
 						<MenuItem>
 							<Link to='/blog'>微博管理</Link>
 						</MenuItem>
+
+						<MenuItem>
+							<Link to='/tool'>常用功能</Link>
+						</MenuItem>
 	    			</Menu>
 				</Col>
 				<Col className = 'all-content-wrap' span={22} offset={1}>

@@ -65,7 +65,33 @@ let routerConfig = ({history , app}) =>{
                             } , 'blogList')
                         }
                     }
-                }                
+                },
+                {
+                    path : 'tool',
+                    getComponent(nextState , cb){
+                        require.ensure([] , require => {
+                            cb(null , require('./managerComponents/tool').default)
+                        } , 'toolIndex')
+                    },
+                    indexRoute : {
+                        getComponent(nextState , cb){
+                            require.ensure([] , require => {
+                                cb(null , require('./managerComponents/tool/createPush').default)
+                            } , 'createPush')
+                        }
+                    },
+                    childRoutes : [
+                        {
+                            path : 'createPush',
+                            getComponent(nextState , cb){
+                            require.ensure([] , require => {
+                                cb(null , require('./managerComponents/tool/createPush').default)
+                                } , 'createPush')
+                            }
+                        },
+                        
+                    ]
+                } 
 
             ]
         }
