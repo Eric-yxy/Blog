@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+1<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -70,13 +70,15 @@
 //    dataComm.isLogin('yang' , callback); //username
 //    dataComm.loginOut('yang' , callback); //username
 //    dataComm.getUserData('yang' , callback); //username , cb
+dataComm.getAllUserData(callback);
 //    dataComm.addOneBlog('yang' , Math.round(new Date().getTime()/1000) , 'personal' , 'this is blog content' , ['adsf'] , callback); //username , data , type , blog content , blog pic , callback
 //    dataComm.getBlogList('personal' ,['yang'] , 5 , 0 , callback); // type , blogAuthorArray , blogNumber , rank callback
+// dataComm.getBlogList('all' , '' , 0 , 0 , callback);
 //    dataComm.addComment("58873f769ad2ab449eaf0004" , 'yang' , Math.round(new Date().getTime()/1000), 'this is comment example' ,  callback) //author , content , callback
 //    dataComm.addLikes('yang' , '58873f769ad2ab449eaf0004' , callback);//username , blogId , callback
 //    dataComm.addCollection('yang' , '58873f769ad2ab449eaf0004' , callback) //username , blogId , callback
 //    dataComm.addAttention('eric' , 'yang' , callback); //user , attentionUserName , callback
 //    dataComm.getComment('58873f769ad2ab449eaf0004' , callback);//blogId , callback
-    dataComm.updateUserDetail('yang' , {'realName' : 'yjp' , 'blood' : 'AB' , 'sex' : 2 , 'intro' : 'this is introduce text'} , callback) //username , userDetailData (obj) , cb
+    // dataComm.updateUserDetail('yang' , {'realName' : 'yjp' , 'blood' : 'AB' , 'sex' : 2 , 'intro' : 'this is introduce text'} , callback) //username , userDetailData (obj) , cb
 </script>
 </html>

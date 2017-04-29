@@ -29,6 +29,10 @@ userSchema.statics.getUserData = function(username , callback){
     this.find({'username' : username} , callback);
 };
 
+userSchema.statics.getAllUserData = function(callback){
+    this.find({} , callback);
+}
+
 //addBlogId to likes
 userSchema.statics.addLikes = function(username , blogId , callback){
     this.update({'username' : username} , {$push : {'likes' : blogId}} , callback)
@@ -48,7 +52,6 @@ userSchema.statics.updateUserDetail = function(username , data , callback){
         callback();
     })
 }
-
 
 //addBlogId to store
 userSchema.statics.addCollection = function(username , blogId , callback){
@@ -97,6 +100,10 @@ blogSchema.statics.minusCollection = function(blogId){
 blogSchema.statics.findByLikes = function(number , skipNumber , cb){
     this.find().sort({'likes' : -1}).limit(number).skip(skipNumber).exec(cb);
 };
+
+blogSchema.statics.findAllBlog = function(cb){
+  this.find().sort({'likes' : -1}).exec(cb);
+}
 
 //getBlogList (type personal but have no attention)
 blogSchema.statics.findByOneUser = function(number , skipNumber , username , cb){

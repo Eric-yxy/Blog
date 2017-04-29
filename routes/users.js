@@ -138,6 +138,24 @@ var getUserData = function(req , res){
     });
 }
 
+var getAllUserData = function(req , res){
+  var resObj = {
+    'msg' : 'true',
+    'data' : {}
+  }
+  let cb = (err , item) => {
+    if(err) return console.err(err);
+    let result = {};
+    result.data = item;
+    for(let a in result){
+      console.log(a);
+      delete result[a].password;
+    }
+    res.send(result);
+  }
+  UserModel.getAllUserData(cb);
+}
+
 var getBlogList = function(req , res){
     var resObj = {
         'msg' : 'true'
@@ -149,7 +167,14 @@ var getBlogList = function(req , res){
     console.log(req.body);
     console.log(typeof(blogAuthorArray));
 
-    if(type == 'likes'){
+    if(type == 'all'){
+        let cb = (err , item)=>{
+          resObj.data = item;
+          res.send(resObj);
+        }
+        blogModel.findAllBlog(cb);
+    }
+    else if(type == 'likes'){
         let cb = (err , item)=>{
             console.log(item);
             resObj.data = item;
@@ -420,6 +445,7 @@ exports.register = register;
 exports.isLogin = isLogin;
 exports.loginOut = loginOut;
 exports.getUserData = getUserData;
+exports.getAllUserData = getAllUserData;
 exports.getBlogList = getBlogList;
 exports.addOneBlog = addOneBlog;
 exports.addComment = addComment;

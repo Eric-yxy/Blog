@@ -45,6 +45,9 @@ exports.api = function(req , res , next){
     if(req.query.do == 'express.user.getUserData'){
         users.getUserData(req , res);
     }
+    if(req.query.do == 'express.user.getAllUserData'){
+        users.getAllUserData(req ,res);
+    }
     if(req.query.do == 'express.user.getComment'){
         users.getComment(req , res);
     }

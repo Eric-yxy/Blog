@@ -84,6 +84,11 @@ DataComm.prototype.getUserData = function(username , callback){
     $.ajax(this.ajaxObj);
 }
 
+DataComm.prototype.getAllUserData = function(callback){
+  this.fillObj('/express/?do=express.user.getAllUserData' , {} , callback);
+  $.ajax(this.ajaxObj);
+}
+
 DataComm.prototype.getComment = function(blogId , callback){
     this.fillObj('/express/?do=express.user.getComment' , {'blogId' : blogId} , callback);
     $.ajax(this.ajaxObj);

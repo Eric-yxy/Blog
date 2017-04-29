@@ -41,8 +41,8 @@ class BlogIndex extends Component {
       <div>
         <aside className='content-layerout-sider'>
           <Menu mode='inline' defaultSelectedKeys={['1']} selectedKeys={this.state.selectKey}>
-            <Menu.Item key='1'><Link to='/blog/blogList'>微博搜索</Link></Menu.Item>
-            
+            <Menu.Item key='1'><Link to='/blog/blogList'>微博列表</Link></Menu.Item>
+
           </Menu>
 
         </aside>
@@ -64,4 +64,3 @@ class BlogIndex extends Component {
 
 // export default connect(select)(Form.create()(Index))
 export default BlogIndex;
-

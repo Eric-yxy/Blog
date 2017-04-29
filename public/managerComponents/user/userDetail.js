@@ -7,7 +7,7 @@ class UserIndex extends Component{
 		this.state = {
 			columns : [
 				{
-					title : '用户名', 
+					title : '用户名',
 					dataIndex : 'userName',
 				},
 				{
@@ -31,6 +31,26 @@ class UserIndex extends Component{
 			data : [],
 			loading : false
 		}
+		this.fetch = this.fetch.bind(this);
+	}
+	fetch() {
+		dataComm.getAllUserData(function(res){
+			let data = res.data.map((item , index) => {
+				return {
+					key : index,
+					userName : item.username,
+					blogNumber : item.blogNumber,
+					fansNumber : item.isAttention.length,
+					attentionNumber : item.attention.length
+				}
+			})
+			this.setState({
+				data
+			})
+		}.bind(this));
+	}
+	componentDidMount(){
+		this.fetch();
 	}
     render() {
         return(
