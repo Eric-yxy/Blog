@@ -50,7 +50,7 @@ class UserIndex extends Component{
 				return {
 					key : index,
 					author : item.author,
-					authorId : item.authorId,
+					authorId : item._id,
 					collectionNumber : item.collectionNumber,
 					commentNumber : item.commentNumber,
 					content : item.contentText,

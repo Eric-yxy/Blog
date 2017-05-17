@@ -22,6 +22,16 @@ app.use(express.static(path.join(__dirname , 'public')));
 app.use(express.static(path.join(__dirname , '/')));
 //app.use(exress.static(path.join(__dirname , '')))
 
+app.use('*', function(req, res, next) {
+    res.append("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "*");
+    res.append("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+    res.append("X-Powered-By",' 3.2.1')
+    res.append("Content-Type", "application/json;charset=utf-8");
+    next();
+});
+
+
 app.use(cookieParser());
 //app.use(session({
 //    secret : '1234',
@@ -34,7 +44,7 @@ app.use(session({
     name : config.session.key,
     secret : config.session.secret,
     cookie : {
-        maxAge : 99999
+        maxAge : 999999999
     },
     store : new MongoStore(config.mongodb),
     saveUninitialized: true,

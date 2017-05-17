@@ -4,6 +4,7 @@ var checkLogin = require('../middlewares/check').checkLogin;
 var router = express();
 
 router.get('/index' , function(req , res){
+  res.set('Content-Type', 'text/html');
     res.render('index.jade');
 });
 router.get('/manager' , function(req ,res){
@@ -11,6 +12,7 @@ router.get('/manager' , function(req ,res){
 });
 router.get('/userPage' , function(req ,res){
     var isLogin = checkLogin(req , res);
+    res.set('Content-Type', 'text/html');
     if(!isLogin){
         res.redirect('/main/index');
         return;

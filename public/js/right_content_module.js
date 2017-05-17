@@ -8,11 +8,13 @@ var HotBlogModel = React.createClass({
                 </div>
                 <div className="hot-blog-list">
                     <ul className="hot-blog-ul">
-                        <li className="hot-blog-li"><span className="article-title">养生必知</span><span className="article-number">200人喜欢</span></li>
-                        <li className="hot-blog-li"><span className="article-title">新闻必知</span><span className="article-number">200人喜欢</span></li>
-                        <li className="hot-blog-li"><span className="article-title">养生必知</span><span className="article-number">200人喜欢</span></li>
-                        <li className="hot-blog-li"><span className="article-title">养生必知</span><span className="article-number">200人喜欢</span></li>
-                        <li className="hot-blog-li"><span className="article-title">养生必知</span><span className="article-number">200人喜欢</span></li>
+                        <li className="hot-blog-li"><span className="article-title">养生必知</span><span className="article-number">220人喜欢</span></li>
+                        <li className="hot-blog-li"><span className="article-title">新闻必知</span><span className="article-number">40人喜欢</span></li>
+                        <li className="hot-blog-li"><span className="article-title">欢笑人间</span><span className="article-number">6456人喜欢</span></li>
+                        <li className="hot-blog-li"><span className="article-title">游戏天地</span><span className="article-number">12人喜欢</span></li>
+                        <li className="hot-blog-li"><span className="article-title">时事要闻</span><span className="article-number">2311人喜欢</span></li>
+                        <li className="hot-blog-li"><span className="article-title">社会热点</span><span className="article-number">901人喜欢</span></li>
+                        
                     </ul>
                 </div>
             </div>

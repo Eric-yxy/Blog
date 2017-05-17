@@ -1,6 +1,7 @@
 var mongoose = require('mongoose'),
     host = '127.0.0.1',
     port = '27017';
+mongoose.Promise = global.Promise;  
 mongoose.connect('mongodb://localhost/myblog');
 
 

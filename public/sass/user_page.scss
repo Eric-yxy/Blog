@@ -80,6 +80,32 @@ body{
   font-size : 13px
 }
 
+.attention-btn{
+  width: 32%;
+height: 31px;
+background: #fa7d3c;
+border-radisu: 5px;
+border-radius: 2px;
+margin: 0 auto;
+text-align: center;
+color: white;
+line-height: 31px;
+cursor : pointer;
+}
+
+.isAttention-btn{
+  width: 32%;
+height: 31px;
+background: -webkit-linear-gradient(top, #5f636d 0%,#535861 100%);
+border-radisu: 5px;
+border-radius: 2px;
+margin: 0 auto;
+text-align: center;
+color: white;
+line-height: 31px;
+cursor : pointer;
+}
+
 //content start
 #content-wrap{
   @include divCenter();
@@ -163,11 +189,3 @@ body{
   height : auto;
   vertical-align : top;
 }
-
-
-
-
-
-
-
-

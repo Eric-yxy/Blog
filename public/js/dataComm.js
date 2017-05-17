@@ -102,4 +102,4 @@ DataComm.prototype.updateUserDetail = function(username , userData , callback){
 }
 
 
-var dataComm = new DataComm('http://localhost:8000');
+var dataComm = new DataComm('http://localhost:8009');

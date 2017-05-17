@@ -6,6 +6,7 @@ var HeaderModel = React.createClass({
                     <div className="logo-wrap">
                         <a href="/main/index">
                             <span className="logo-sapn"></span>
+                            <span className="logo-text">微博</span>
                         </a>
                     </div>
                     <HeaderLoginModel isLogin={this.props.isLogin} onLoginOut={this.props.onLoginOut} onShowLoginLayer={this.props.onShowLoginLayer} onShowRegisterLayer={this.props.onShowRegisterLayer}/>
@@ -90,4 +91,3 @@ var HeaderNavUserModel = React.createClass({
         )
     }
 })
-

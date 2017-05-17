@@ -55,7 +55,7 @@ var login = function(req , res , dbConnect){
         if(err) res.send({'msg' : 'error'});
         //console.log(item[0]._id);
         if(err) {
-            return console.err(err);
+            return console.error(err);
         }
         if(item[0] == undefined){
             resObj.msg = 'error';
@@ -116,6 +116,7 @@ var loginOut = function(req , res){
     res.clearCookie('username');
     req.session.username = null;
     console.log(req.session);
+    res.set('Content-Type' , 'text/html')
     res.send(resObj);
 }
 

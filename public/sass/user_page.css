@@ -4,5 +4,15 @@ body {
 
 #user-detail-wrap {
   width: 100%; }
-
+.attention-btn{
+  width: 32%;
+height: 31px;
+background: #fa7d3c;
+border-radisu: 5px;
+border-radius: 2px;
+margin: 0 auto;
+text-align: center;
+color: white;
+line-height: 31px;
+}
 /*# sourceMappingURL=user_page.css.map */
