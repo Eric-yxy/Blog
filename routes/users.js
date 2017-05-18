@@ -408,8 +408,11 @@ var getComment = function(req , res){
         data : {}
     }
     var data = req.body;
-    blogModel.findOne({ '_id' : ObjectId(data.blogId)}).populate('_comment author').exec(function(err , item){
-        if(err) console.log(err);
+    blogModel.findOne({'_id' : ObjectId(data.blogId)}).exec(function(err , item){
+      console.log(item);
+    })
+    blogModel.findOne({ '_id' : ObjectId(data.blogId)}).populate('_comment').exec(function(err , item){
+        if(err) console.log('error is' , err);
         let compare = (x , y ) =>{
             if(x.date < y.date){
                 return 1;
@@ -420,7 +423,7 @@ var getComment = function(req , res){
             }
         };
         resObj.data = item._comment.commentArray;
-        console.log(item);
+        console.log('comment is :' , item);
         resObj.data.sort(compare);
         res.send(resObj);
     });
